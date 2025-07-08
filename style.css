@@ -1,0 +1,414 @@
+body
+{
+    background:-webkit-linear-gradient(top, rgb(29, 16, 16) 0%, rgb(8, 8, 8) 100%);
+    overflow: hidden;
+    overflow-y: scroll;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.Head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4%;
+    width: calc(100% -100px);
+    margin: 0 auto;
+}
+.Ilogo
+{
+    margin: 1% 8% 1% 2%;
+    width: 10%;
+    height: 100%;
+}
+#IS 
+{
+    margin-right: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+#IS:hover
+{
+    background-color: rgb(199, 197, 197);
+    border-color: rgb(148, 148, 148);
+}
+.Texto1
+{
+    color:white;
+    margin-left: 60px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+#Lenguaje
+{
+    margin-top: 3.7vh;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-right: -10 px;
+    width: 100px;
+    height: 28px;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+.Carrusel
+{
+    display: flex;
+    height: 90%;
+    width: 200%;
+    animation: deslizar 130s linear infinite;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.Main
+{
+    border-radius: 10px;
+    width: calc(100% - 100px);
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.Entradas 
+{
+    margin-top: 8%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.email 
+{
+    font-size: 16px;
+    padding: 15px 20px;
+    background-color: rgba(70, 69, 69, 0.63);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    width: 300px;
+}
+.email::placeholder 
+{
+    color: #ccc;
+}
+.btn 
+{
+    background-color: #e50914;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none !important;
+}
+.btn:hover
+{
+    background-color: #b11d24;
+}
+.Texto 
+{
+    margin-top: 6%;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+.Carrusel img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;  
+}
+@keyframes deslizar
+{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-100%);
+    }
+}
+.tendencias
+{
+    width: calc(100% -100px);
+    height: 35vh;
+    margin: 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.tendencias::-webkit-scrollbar 
+{
+    display: none;
+}
+.Itendencias
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35vh;
+    margin: 0;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.Itendencias img
+{
+    width: 10vw;
+    height: 30vh;
+    margin-top: 2vh;
+    border-radius: 8px;
+    z-index: 0;
+}
+.Itendencias img:hover
+{
+    transform: scale(1.05);
+}
+.Itendencias span
+{
+    z-index: 1;
+    color: #000000;
+    font-size: 100px;
+    margin-left: 1%;
+    font-family: sans-serif;
+    -webkit-text-stroke: 2px white;
+    transform: translateY(30%);
+    transform: translateX(40%);
+    margin-bottom: -20px;
+}
+.scroll
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    margin: 0
+}
+
+.scroll-btn
+{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover
+{
+    color: rgb(150, 150, 150);
+}
+.RazonU
+{
+    color:white;
+    margin-left: 60px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.Motivos
+{
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    height: 35vh;
+    justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.Motivos div
+{
+    position: relative;
+    margin-right: 2%;
+    width: 20vw;
+    height: 100%;
+    background:-webkit-linear-gradient(top, rgb(34, 21, 71), rgb(53, 21, 26));
+    border-radius: 18px;
+}
+.Motivos h1
+{
+    color: white;
+    margin-left: 5%;
+    font-size: 18px;
+}
+.Motivos h4
+{
+    color: white;
+    margin-left: 5%;
+    font-size: 13px;
+}
+.Motivos img
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: auto;
+}
+.PreguntasF
+{
+    color:white;
+    margin-left: 60px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.Preguntas
+{
+    max-width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.pregunta
+{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+} 
+.preguntaCB 
+{
+    display: none;
+}
+.labelP 
+{
+    display: block;
+    background-color: #303030;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.labelP:hover 
+{
+    background-color: #505050;
+}
+.labelP::after 
+{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+}
+.preguntaCB:checked + .labelP::after 
+{
+    content: "−";
+}
+  
+.respuesta 
+{
+    max-height: 0;
+    overflow: hidden;
+    background-color: #444;
+    color: white;
+    padding: 0 20px;
+}
+  
+.preguntaCB:checked ~ .respuesta 
+{
+    max-height: 300px;
+    padding: 20px;
+}
+.Texto2
+{
+    margin-left: calc(50vw - 23.5vw);
+    color: white;
+    font-size: 13px;
+}
+.mail2
+{
+    display: flex;
+    flex-direction: row;
+}
+.email2
+{
+    margin-left: calc(50vw - 27.5vw);
+    width: 40vw;
+    height: 5vh;
+    background-color: rgb(17, 17, 17);
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.btn2
+{
+    width: 15vw;
+    height: 5vh;
+    font-size: 18px;
+    background-color: #b1121a;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+.btn2:hover
+{
+    background-color: #811b20;
+    cursor: pointer;
+}
+.dudas1
+{
+    margin-left: 3vw;
+    color: #525252;
+}
+.enlaces
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    justify-content: space-between;
+}
+.enlaces ul
+{
+    list-style-type: none;
+}
+.enlaces ul li:not(:last-child) 
+{
+    margin-bottom: 10px;
+}
+.enlaces a
+{
+    color: #7e7c7c;
+    text-decoration: none;
+}
+.enlaces a:active 
+{
+    color: #ff0000;
+}
+#Lenguaje2
+{
+    margin-top: 2.8vh;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-right: -10 px;
+    width: 100px;
+    height: 28px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+}
+.Final
+{
+    color: #929090;
+    margin-left: 3%;
+}
