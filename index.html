@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JordanMP - Zapatillas Exclusivas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        
+       
+        header {
+        width: 100%;
+        height: 40vh;          
+        background: #000;      
+        overflow: hidden;
+        }
+
+        header picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        }
+
+        header picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;   
+        object-position: center;
+        display: block;
+        }
+
+
+      
+        @media (max-width: 768px) {
+        header { height: 30vh; }
+        }
+        @media (max-width: 480px) {
+        header { height: 28vh; }
+        }
+
+        
+        .btn {
+            background-color: #0074d9;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .producto {
+            background-color: #111111;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+        .producto img {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover;
+        border-radius: 8px;
+        }
+
+        
+        .contador {
+            background-color: #001f3f;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3rem;
+            margin-top: 30px;
+        }
+
+        
+        footer {
+            background-color: #000000;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999999;
+        }
+
+        
+        @media (max-width: 768px) {
+            header {
+                height: 30vh;
+            }
+            .producto {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                height: 25vh;
+            }
+            .producto {
+                width: 100%;
+            }
+            .btn {
+                width: 100%;
+            }
+            input[type="email"] {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+    <picture>
+        <source media="(max-width: 768px)" srcset="bannerV.jpg">
+        <source media="(max-width: 1329px)" srcset="bannerH.jpg"> 
+        <img src="banner.jpg" alt="Banner JordanMP">
+    </picture>
+    </header>
+
+
+  
+    <section class="section" id="productos">
+        <h2>Modelos Destacados</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="j1.jpg" alt="Jordan 1 Retro">
+                <h3>Air Jordan 1 Retro</h3>
+                <p>$120.000</p>
+            </div>
+            <div class="producto">
+                <img src="j4.jpg" alt="Jordan 4 Fire Red">
+                <h3>Air Jordan 4 Fire Red</h3>
+                <p>$150.000</p>
+            </div>
+            <div class="producto">
+                <img src="j11.jpg" alt="Jordan 11 Concord">
+                <h3>Air Jordan 11 Concord</h3>
+                <p>$180.000</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="contador">
+        Oferta especial termina en: <span id="countdown"></span>
+    </div>
+
+
+    <section class="section">
+        <h2>Suscríbete para recibir ofertas</h2>
+        <input type="email" placeholder="Ingresa tu correo" style="padding:10px; border:none; border-radius:5px; width:250px; max-width:100%;">
+        <button class="btn">Suscribirme</button>
+    </section>
+
+    <section class="section">
+        <h2>Preguntas Frecuentes</h2>
+        <p><strong>¿Qué es JordanMP?</strong> Somos una tienda especializada en modelos exclusivos de Air Jordan, importados y nacionales.</p>
+        <p><strong>¿Es gratis registrarse?</strong> Sí, la suscripción y registro son 100% gratuitos.</p>
+        <p><strong>¿Puedo cambiar un producto?</strong> Sí, dentro de los 7 días hábiles.</p>
+        <p><strong>¿Realizan envíos?</strong> Enviamos a todo el país con correo privado.</p>
+    </section>
+
+    <footer>
+        &copy; 2025 JordanMP - Todos los derechos reservados
+    </footer>
+
+    <script>
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 17);
+        endDate.setHours(endDate.getHours() + 16);
+        endDate.setMinutes(endDate.getMinutes() + 16);
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = endDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            document.getElementById("countdown").innerText =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
+
